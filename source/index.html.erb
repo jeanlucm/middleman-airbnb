@@ -2,14 +2,23 @@
 title: Le Wagon - Middleman
 ---
 
-<div id="home">
+<%= partial "layouts/banner" %>
+
+<!-- <div id="home">
   <div class="home-content">
     <%= image_tag "logo.png", width: "200" %>
-    <p>
-      Middleman is now running!
-    </p>
     <p class="about">
       <%= link_to "More about this template", "about.html" %>
     </p>
   </div>
+</div> -->
+<div class="container">
+  <div class="row">
+  <% ["Paris", "Tokyo", "New York"].each do |city| %>
+    <div class="col-sm-4">
+    <%= partial "layouts/card" %>
+    </div>
+  <% end %>
 </div>
+</div>
+
